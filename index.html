@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>???/</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background-color: blueviolet;
+            background-image: url();
+            padding: 2em;
+            overflow: hidden;
+        }
+
+        h1{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            width: 120px;
+            height: 35px;
+            background: rgb(6, 87, 238);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.417);
+            margin-left: 3px;
+            cursor: pointer;
+        }
+        #s{
+            position: absolute;
+            left: 38%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>voçe vai pagar um açai pro Guilherme?</h1>
+        <div>
+            <button id="s">Sim</button>
+            <button oninput="s()" id="nao">Não</button>
+        </div>
+    </div>
+    <script>
+      
+        document.getElementById('nao').addEventListener('mouseenter' , () =>{
+            let min = 50;
+            let max = 450;
+            let numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
+            document.getElementById('nao').style.margin = numeroAleatorio + 'px'
+            
+            
+        })
+
+
+        document.getElementById('s').addEventListener("click" , () =>{
+            const numeroTelefone = '+559885321719';
+            var mensagem = 'Oii vou te pagar um açai ❤️❤️❤️❤️'
+            var linkwpp = `https://wa.me/${numeroTelefone}?text=${encodeURIComponent(mensagem)}`
+            window.open(linkwpp ,  '_blank')
+        })
+    </script>
+</body>
+</html>
